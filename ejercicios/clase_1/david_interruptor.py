@@ -9,7 +9,6 @@ class Interruptor:
         else:
             self.encendido = True
             self.encender() 
-                    
 
     def encender(self):
         print("Encendido")
