@@ -8,7 +8,8 @@ class Interruptor:
             self.apagar()
         else:
             self.encendido = True
-            self.encender()         
+            self.encender() 
+                    
 
     def encender(self):
         print("Encendido")
