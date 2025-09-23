@@ -5,10 +5,10 @@ class Interruptor:
     def pulsar(self):
         if self.encendido:
             self.encendido = False
-            self.encender()
+            self.apagar()
         else:
             self.encendido = True
-            self.apagar()         
+            self.encender()         
 
     def encender(self):
         print("Encendido")
