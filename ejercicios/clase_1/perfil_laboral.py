@@ -1,9 +1,8 @@
-import pandas as pd
+# import pandas as pd
 
 # Cargar datos desde apuntes/clase_1
 # df = pd.read_csv("../../apuntes/clase_1/data.csv")
 df = pd.read_csv("./apuntes/clase_1/data.csv")     #  correcta
-
 
 # 1) Número total de personas
 print(f" Total de personas: {len(df)}")
@@ -22,7 +21,6 @@ df["is_remote"] = df["ocupacion"].str.lower().apply(
 # Mostrar resumen
 print("\n Distribución de 'is_remote':")
 print(df["is_remote"].value_counts())
-
 
 # version Polars
 
@@ -56,5 +54,3 @@ print("\n Distribución de 'is_remote':")
 print(df.select([
     pl.col("is_remote").value_counts()
 ]))
-
-# 

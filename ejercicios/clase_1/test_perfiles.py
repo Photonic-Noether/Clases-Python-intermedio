@@ -18,7 +18,6 @@ def test_is_remote_pandas():
     print(" Test Pandas: lógica 'is_remote' correcta")
 
 
-
 def test_is_remote_polars():
     df = pl.DataFrame({
         "nombre": ["Carlos", "Raquel", "Ana", "Luis"],
@@ -40,4 +39,6 @@ def test_is_remote_polars():
     result = df["is_remote"].to_list()
 
     assert result == expected, f"❌ Test Polars fallido: {result} ≠ {expected}"
-    print(" Test Polars: lógica 'is_remote' correcta"
+    print(" Test Polars: lógica 'is_remote' correcta")
+
+
