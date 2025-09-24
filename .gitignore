@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+.python-version
+entorno.txt
+main.py
+pyproject.toml
+uv.lock
+ejercicios/clase_2/data.csv
+.gitignore
