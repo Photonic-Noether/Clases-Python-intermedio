@@ -51,7 +51,7 @@ este_repositorio/
 
 
 
-- [ ] Clase 1 — 23/09/2025  
+- [X] Clase 1 — 23/09/2025  
 - [ ] Clase 2 — 24/09/2025  
 - [ ] Clase 3 — 25/09/2025  
 - [ ] Clase 4 — 29/09/2025  
