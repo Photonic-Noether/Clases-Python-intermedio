@@ -24,4 +24,8 @@ interruptor.encender()
 print(interruptor.estado())  # Encendido
 interruptor.apagar()
 print(interruptor.estado())  # Apagado
+<<<<<<< HEAD
+=======
+
+>>>>>>> development
 # 
