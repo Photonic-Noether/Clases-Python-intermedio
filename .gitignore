@@ -212,3 +212,5 @@ pyproject.toml
 uv.lock
 ejercicios/clase_2/data.csv
 .gitignore
+apuntes/clase_2/data.csv
+apuntes/clase_2/ejercicio_para_casa.txt

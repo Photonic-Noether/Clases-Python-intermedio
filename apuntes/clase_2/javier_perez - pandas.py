@@ -5,7 +5,7 @@ crear un script que me indique:
 3) programar una forma de crear una nueva columna is_remote y que a los ingenieros у desarrolladores se establezca en true, al resto, en false
 
 
-cd 'ejercicios/clase_2'
+cd 'apuntes/clase_2'
 uv run 'javier_perez - pandas.py'
 """
 
