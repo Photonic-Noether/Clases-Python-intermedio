@@ -78,3 +78,4 @@ def test_no_menores_polars():
         f"❌ Hay {menores.shape[0]} menores de edad:\n" +
         "\n".join(f"- {row['nombre']} ({row['edad']})" for row in menores.rows())
     )
+# 
