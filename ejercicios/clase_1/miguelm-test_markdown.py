@@ -1,6 +1,6 @@
 import pytest
 from xml.etree import ElementTree as ET
-from markdown_miguelm import convertir_markdown
+from miguelm_markdown import convertir_markdown
 
 @pytest.fixture
 def texto_markdown():
