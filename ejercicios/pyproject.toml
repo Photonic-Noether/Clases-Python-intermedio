@@ -1,0 +1,17 @@
+[project]
+name = "python-intermedio"
+version = "0.1.0"
+description = "Para el curso de python-intermedio Tajamar 2025"
+authors = [
+    {name = "David Emanuel Pricop",email = "40196981+davidpricop@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.3.2,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
