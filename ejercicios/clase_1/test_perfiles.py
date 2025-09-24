@@ -41,3 +41,4 @@ def test_is_remote_polars():
 
     assert result == expected, f"❌ Test Polars fallido: {result} ≠ {expected}"
     print(" Test Polars: lógica 'is_remote' correcta")
+# 
