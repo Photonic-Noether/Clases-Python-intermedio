@@ -1,0 +1,14 @@
+import csv, io, pathlib, sys
+
+FILE = pathlib.Path('data.csv')  
+
+def hay_menor(ruta=FILE):
+    "Devuelve True si encuentra al menos una persona < 18 años."
+    with open(ruta, newline='', encoding='utf-8') as f:
+        for row in csv.DictReader(f):
+            if int(row['edad']) < 18:
+                return True
+    return False
+
+if __name__ == '__main__':
+    print('¿Hay menores de edad?', 'Sí' if hay_menor() else 'No')
