@@ -1,0 +1,55 @@
+#busca [TOC] en el documento y lo reemplaza con un índice 
+
+import markdown
+import re
+
+def generate_toc(markdown_text):
+    """Generar índice a partir de texto Markdown"""
+    lines = markdown_text.split('\n')
+    headers = []
+    
+    for line in lines:
+        # Detectar encabezados Markdown
+        match = re.match(r'^(#{1,6})\s+(.+)$', line)
+        if match:
+            level = len(match.group(1))
+            text = match.group(2).strip()
+            slug = re.sub(r'[^\w\s-]', '', text.lower())
+            slug = re.sub(r'[-\s]+', '-', slug)
+            
+            headers.append({
+                'level': level,
+                'text': text,
+                'slug': slug.strip('-')
+            })
+    
+    # Generar Markdown del índice
+    if not headers:
+        return ""
+    
+    toc_lines = ["## Índice de Contenidos", ""]
+    
+    for header in headers:
+        indent = "  " * (header['level'] - 2) if header['level'] > 1 else ""
+        toc_lines.append(f"{indent}- [{header['text']}](#{header['slug']})")
+    
+    return "\n".join(toc_lines)
+
+def process_markdown_file(input_file, output_file):
+    """Procesar archivo Markdown y añadir índice"""
+    with open(input_file, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Generar y insertar el índice
+    toc_content = generate_toc(content)
+    processed_content = content.replace('[TOC]', toc_content)
+    
+    # Guardar resultado
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(processed_content)
+    
+    print(f"Índice generado en: {output_file}")
+
+# Uso
+if __name__ == "__main__":
+    process_markdown_file("documento.md", "documento_con_indice.md")
