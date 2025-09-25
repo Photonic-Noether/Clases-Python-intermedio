@@ -4,7 +4,7 @@ import markdown
 import re
 
 def generate_toc(markdown_text):
-    """Generar índice a partir de texto Markdown"""
+    "Generar índice a partir de texto Markdown"
     lines = markdown_text.split('\n')
     headers = []
     
@@ -27,7 +27,7 @@ def generate_toc(markdown_text):
     if not headers:
         return ""
     
-    toc_lines = ["## Índice de Contenidos", ""]
+    toc_lines = ["Índice de Contenidos", ""]
     
     for header in headers:
         indent = "  " * (header['level'] - 2) if header['level'] > 1 else ""
@@ -36,7 +36,7 @@ def generate_toc(markdown_text):
     return "\n".join(toc_lines)
 
 def process_markdown_file(input_file, output_file):
-    """Procesar archivo Markdown y añadir índice"""
+    "Procesar archivo Markdown y añadir índice"
     with open(input_file, 'r', encoding='utf-8') as f:
         content = f.read()
     
