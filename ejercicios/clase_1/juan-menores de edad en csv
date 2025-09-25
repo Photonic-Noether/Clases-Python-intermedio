@@ -1,14 +1,10 @@
-import csv, io, pathlib, sys
+import pandas as pd, pathlib
 
-FILE = pathlib.Path('data.csv')  
+FILE = pathlib.Path('data.csv')          # cambia si tu archivo está en otra ruta
 
 def hay_menor(ruta=FILE):
-    "Devuelve True si encuentra al menos una persona < 18 años."
-    with open(ruta, newline='', encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            if int(row['edad']) < 18:
-                return True
-    return False
+    df = pd.read_csv(ruta)
+    return (df.edad < 18).any()
 
 if __name__ == '__main__':
     print('¿Hay menores de edad?', 'Sí' if hay_menor() else 'No')
