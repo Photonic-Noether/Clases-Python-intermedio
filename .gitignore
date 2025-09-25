@@ -209,3 +209,4 @@ __marimo__/
 # My files to ignore
 pyproject.toml
 poetry.lock
+data.csv
